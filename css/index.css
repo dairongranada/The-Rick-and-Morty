@@ -11,7 +11,7 @@
     --colorGray: #b0b0b0;
     --colorVerde: #17FF00;
     --colorRojo: #FF0C0C;
-    --colorA: #00F4C2;
+    --colorA: #00b6ff;
 }
 
 body{background-color: var(--colorNegro);color: #fff;font-size: 16px;}
@@ -20,46 +20,53 @@ body{background-color: var(--colorNegro);color: #fff;font-size: 16px;}
 .btnRaM{cursor: pointer;display: inline-block;border: 0;padding: 10px 20px;background-color: #262626;color: #fff;border: 1px solid #fff;font-size:15px;margin: 10px 0 ;}
 
 
-header{width: 100%;height: 35vh;background-image: url("../img/header.jpg"); background-size: cover; background-position: center;background-repeat: no-repeat;background-position-y: -5vh;}
-header img {bottom: 2vh;position: fixed;width: 80px;left: 2vh; transition: 2s;}
-header img:hover {transform: scale(1.1)}
+header{width: 100%;height: 35vh; display: flex; justify-content: center; align-items: center}
+header img{ width: 350px}
+.LogoFixed {bottom: 2vh;position: fixed;width: 80px;left: 2vh; transition: 2s;}
+.LogoFixed:hover {transform: scale(1.1)}
 /*///////////////////////////////////////////////////////////////////////////////////////*/
-.parrafCharacter{
-    text-align: center;padding: 3vh;font-size:25px;color: var(--colorA); 
-    text-shadow: 1px 1px 25px #cff8009f;
-}
+
 .inputCharacter{
-    display: flex;justify-content: center;
-    width: 100%;height:4vh;
+    display: flex;justify-content: center; align-items: center;
+    width: 100%;height:2vh; gap: 5px;
+    margin-bottom: 5vh;
 }
-.inputCharacter input{
-    background-color: transparent;border: none; border-bottom: 3px solid var(--colorGray); outline: none;
-    text-align: center;width: 85%; font-size: 20px;color: #00f310;
-    text-shadow: 1px 1px 25px #f8be00;
-    display: flex; justify-content: center; align-items:center;
-}
+.inputCharacter input{padding: 10px;width: 35%; border: none; border-radius: 8px;}
+.inputCharacter button{cursor: pointer; padding: 11px;width: 80px; border: none; border-radius: 8px; display: flex; justify-content: center;align-items: center; background-color: var(--colorA)}
+
+
 
 main{
     padding: 30px;
     display: flex;justify-content:center;
     flex-wrap: wrap; gap: 50px;
+    background-color: rgba(0, 0, 0, 0.755);
 }
 
 .contanerCard{
-    width: 350px;height: 150px;
+    width: 328px;height: 150px;
     background-color: #262626;
-    display: flex; gap: 50px;
-    color: aqua;font-size:20px; 
+    display: flex; gap: 20px;
+    color: var(--colorA);font-size:20px; 
     border-radius: 15px;
+    opacity: .7;filter: grayscale(100%)
 }
+.contanerCard:hover{opacity: 1; box-shadow: 0 0 10px var(--colorA);filter: grayscale(0) }
 
 .contanerCard img {width: 150px;height: 100%;border-radius:15px 0 0 15px;}
 
-.info{display: flex;justify-content: center;align-items: center;flex-direction: column;}
+
+.info{display: flex;gap: 2vh;;align-items: flex-start;flex-direction: column;justify-content: center;}
 .info p{ color: var(--colorGray);  font-style: italic; } 
 
+
+
+.species{color: var(--colorGray);font-style:none;font-size:15px;}
+
 @media (max-width:600px){
-    header {height: 50vh;background-position-y: 0vh;}
-    header img {width: 63px;}
+    header img{ width: 300px}
+    .LogoFixed{width: 63px;}
     .contanerCard {gap: 13px;}
+    .inputCharacter input {width: 59%;}
+    
 }
